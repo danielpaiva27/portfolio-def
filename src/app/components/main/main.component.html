@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg navbar-light  mb-3">
+	<div class="container-fluid  ">
+
+
+		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+		<div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+			<ul class="navbar-nav flex-row d-flex justify-content-evenly">
+				<li class="nav-item active">
+					<a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Sobre mim</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Projetos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Contate-me</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<main class="h-100">
+
+  <router-outlet></router-outlet>
+
+
+</main>
+
+
+<footer>
+
+
+</footer>
