@@ -1,1 +1,28 @@
-<p>game works!</p>
+<div class="jogo-container">
+  <h1>Bulls e Cows</h1>
+  <p>Tente adivinhar o número secreto de 6 dígitos!</p>
+
+  <form (ngSubmit)="enviarPalpite()">
+    <input
+      type="text"
+      [(ngModel)]="palpite"
+      name="palpite"
+      maxlength="6"
+      required
+      placeholder="Digite seu palpite (6 dígitos)"
+    />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div *ngIf="resposta">
+    <p><strong>Bulls:</strong> {{ resposta.bulls }}</p>
+    <p><strong>Cows:</strong> {{ resposta.cows }}</p>
+  </div>
+
+  <h3>Histórico de Palpites</h3>
+  <ul>
+    <li *ngFor="let tentativa of historicoDePalpites">
+      {{ tentativa.palpite }} - Bulls: {{ tentativa.bulls }}, Cows: {{ tentativa.cows }}
+    </li>
+  </ul>
+</div>
