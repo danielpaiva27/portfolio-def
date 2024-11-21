@@ -6,15 +6,19 @@ body{
 }
 
 
-a, p {
+a, p , h1, h3, label{
   color: #fff !important;
 
   font-family: "Poppins", sans-serif;
+  margin: 10px;
 
-  font-size: 13px;
 }
 
 
 h1{
   font-family: "Poppins", sans-serif;
+}
+
+a, p, label{
+  font-size: 13px;
 }

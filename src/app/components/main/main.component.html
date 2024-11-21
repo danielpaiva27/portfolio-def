@@ -8,14 +8,12 @@
 		<div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
 			<ul class="navbar-nav flex-row d-flex justify-content-evenly">
 				<li class="nav-item active">
-					<a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Sobre mim</a>
+					<a class="nav-link" [routerLink]="'/about'" (click)="isMenuCollapsed = true">Sobre mim</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Projetos</a>
+					<a class="nav-link" [routerLink]="'/proj'" (click)="isMenuCollapsed = true">Projetos</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Contate-me</a>
-				</li>
+
 			</ul>
 		</div>
 	</div>
